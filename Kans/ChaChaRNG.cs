@@ -44,7 +44,7 @@ namespace Kans {
 		}
 
 		/// <summary>
-		/// Construct the generator with 12 ChaCha rounds.
+		/// Constructs the generator with 12 ChaCha rounds.
 		/// </summary>
 		public ChaChaRNG() : this(12) { }
 

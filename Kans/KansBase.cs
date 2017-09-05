@@ -43,7 +43,7 @@ namespace Kans {
 
 		/// <summary>
 		/// The generator's core method.
-		/// <see cref="KansBase"/> implementations should override this method rather than <see cref="Sample"/>.
+		/// <see cref="KansBase"/> implementations should override this method rather than <see cref="Random.Sample"/>.
 		/// </summary>
 		/// <returns>A random <see cref="uint"/> uniformly distributed from the set {0, 1, ..., <see cref="uint.MaxValue"/>}</returns>
 		protected abstract uint NextU();
