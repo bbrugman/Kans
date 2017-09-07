@@ -7,16 +7,18 @@ namespace Kans.ListAlgorithms {
 	/// </summary>
 	public static class ListAlgorithms {
 		/// <summary>
-		/// Randomizes the order of the list with the Fisher-Yates shuffle.
+		/// Randomizes the order of the list in-place with the Fisher-Yates shuffle.
 		/// </summary>
 		/// <param name="rng">The random number generator to use.</param>
-		public static void Shuffle<T>(this IList<T> list, IAltRandom rng) {
+		/// <returns>The shuffled list.</returns>
+		public static IList<T> Shuffle<T>(this IList<T> list, IAltRandom rng) {
 			for (int i = 0; i < list.Count - 2; i++) {
 				int j = rng.RandInt(i, list.Count - 1);
 				T temp = list[i];
 				list[i] = list[j];
 				list[j] = temp;
 			}
+			return list;
 		}
 
 		/// <summary>
