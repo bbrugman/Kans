@@ -57,7 +57,7 @@ namespace Kans {
 				C[i] = array[i] ^ array[i + 5] ^ array[i + 10] ^ array[i + 15] ^ array[i + 20];
 			}
 			for (int i = 0; i < 5; i++) {
-                D[i] = C[(i + 4) % 5] ^ ((C[(i + 1) % 5] << 1) | (C[(i + 1) % 5] >> 31));
+				D[i] = C[(i + 4) % 5] ^ ((C[(i + 1) % 5] << 1) | (C[(i + 1) % 5] >> 31));
 			}
 			for (int i = 0; i < 25; i++) {
 				array[i] = array[i] ^ D[i % 5];

@@ -72,7 +72,7 @@ namespace Kans {
 			do {
 				num = NextU();
 			} while (num >= bound);
-            return (int)((n * (double)num / bound) + lower);
+			return (int)((n * (double)num / bound) + lower);
 		}
 
 		public double Random() {
