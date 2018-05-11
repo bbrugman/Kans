@@ -2,7 +2,8 @@
 
 namespace Kans {
 	/// <summary>
-	/// Represents a <see cref="System.Random"/> instance that encapsulates an underlying <see cref="IAltRandom"/> instance. The underlying instance must be seeded prior to wrapping.
+	/// Represents a <see cref="System.Random"/> instance that encapsulates an underlying <see cref="IAltRandom"/> instance.
+	/// The underlying instance must be seeded prior to wrapping.
 	/// </summary>
 	public class SystemRandomWrapper : Random {
 
@@ -11,7 +12,7 @@ namespace Kans {
 		/// <summary>
 		/// Constructs a wrapper around an <see cref="IAltRandom"/> object.
 		/// The resulting objects behaves as an ordinary <see cref="System.Random"/> instance as much as possible,
-		/// except for using better algorithms.
+		/// except it uses better algorithms.
 		/// </summary>
 		/// <param name="wrapped">The <see cref="IAltRandom"/> object to be encapsulated.</param>
 		public SystemRandomWrapper(IAltRandom wrapped) {

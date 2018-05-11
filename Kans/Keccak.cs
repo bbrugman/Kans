@@ -89,7 +89,7 @@ namespace Kans {
 			uint[] P = new uint[requiredInputLength];
 			Array.Copy(input, P, input.Length);
 			// Now follows 10*1 padding
-			// Compensating for endianness and bit order means a different form
+			// Compensating for endianness and bit order means the operands look different
 			P[input.Length] = 0x00000001u;
 			P[requiredInputLength - 1] ^= 0x80000000u;
 

@@ -9,9 +9,8 @@ namespace Tests {
 	public class RNGTests {
 
 		private void TestGenerator(KansBase rng, string name) {
-			/* In a way random number generators are a poor candidate for unit testing, since there is
-			no specific output they must produce (quite on the contrary). For now, manual inspection
-			of their output will suffice. */
+			/* In a way random number generators are poor candidates for unit testing, since there is
+			no specific output they must produce. For now, manual inspection of their output will suffice. */
 
 			IList<int> urn = new List<int>() { 1, 2, 4, 5, 6, 7, 8, 9 };
 
@@ -27,7 +26,7 @@ namespace Tests {
 			for (int i = 1; i <= 10; i++) {
 				Console.WriteLine(rng.Random());
 			}
-			Console.WriteLine(name + " dicerolls:");
+			Console.WriteLine(name + " dice rolls:");
 			for (int i = 1; i <= 10; i++) {
 				Console.WriteLine(rng.RandInt(1, 6));
 			}
