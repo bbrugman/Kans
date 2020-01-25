@@ -61,7 +61,7 @@ namespace Kans {
 		public int RandInt(int lower, int upper) {
 			if (lower > upper) {
 				throw new ArgumentException(
-					String.Format("Lower bound less than upper bound ({0} < {1})", lower, upper),
+					String.Format("Lower bound ({0}) must be lower than upper bound ({1})", lower, upper),
 					"lower");
 			}
 			/* The following rejection sampling algorithm yields an exact uniform distribution if the generator
